@@ -1,0 +1,19 @@
+.fanart_images {
+    display: flex;
+    flex-direction: column;
+
+}
+.fanart_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.textAndButton {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.fanartButton {
+    margin-left: 10px;
+}

@@ -1,31 +1,37 @@
 import React from "react";
 
-import img from "../img/fanart30.jpeg";
+import img from "../img/fanart3.jpeg";
+import './awards.css'
 
 export default function Awards() {
     return (
         <>
-            <h1>Awards</h2>
-            <ul>
-                <li>
-                    restaurant gordodn ramsay in london voted top restraurtn uk and has 3 michele stars
-                </li>
-                <li>
-                    officer of the order of the british empire (appointed by quieen elizatbeth) rip
-                </li>
-                <li>
-                    guinessess owrld record for fastest time to fillet a fish 1 MINUTE 5 seconds
-                </li>
-                <li>
-                    <img src={img}/>
-                </li>
-                <li>
-                    guiness wrold record for longest pasta sheet roleld in 60 seconds 1.45 mieteres wth is a meter
-                </ul>
-                <li>
-                    100 most powerful people
-                </li>
-            </ul>
+        <h1>Awards</h1>
+            <div className="wrapper">
+                <div className="list">
+                    <ul>
+                        <li>
+                            Gordon Ramsay's London Restaurant was voted as the top restaurant in the UK! Plus, it has 3 Michelin Stars! ⭐
+                        
+                        </li>
+                        <li>
+                            Officer of the Order of the British Empire.
+                        </li>
+                        <li>
+                            Guinness World Record holder for the fast time to <a target="_blank" href="https://www.youtube.com/watch?v=sVT9sotjycM&ab_channel=TheFWord">filet a fish!</a>
+                        </li>
+
+                
+                    
+                        <li>
+                            Guinesses World Record holder for the <a target="_blank" href="https://www.youtube.com/watch?v=aRc_ArRoSzE&ab_channel=TheFWord">longest pasta sheet rolled in 60 seconds</a> (1.45 meters)!
+                        </li>
+                    
+                    </ul>
+            
+                </div>
+                <img src={img}/>
+            </div>
         </>
     );
 };

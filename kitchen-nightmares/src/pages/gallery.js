@@ -13,15 +13,15 @@ export default function Gallery() {
             <Row>
                 <Container fluid>
                     <Row>
-                    <Col xs={6} md={2}>
-                        <img src={kitchenNightmares} width={250} height={400}/>
-                    </Col>
-                    <Col xs={6} md={2}>
+                        <Col xs={6} md={2}>
+                            <img src={kitchenNightmares} width={250} height={400}/>
+                        </Col>
+                    {/* <Col xs={6} md={2}>
                         <img source={masterChef} width={250} height={400}/>
-                    </Col>
-                    <Col xs={6} md={2}>
-                        <img src={hellsKitchen} width={250} tall={400}/>
-                    </Col>
+                    </Col> */}
+                        <Col xs={6} md={2}>
+                            <img src={hellsKitchen} width={250} tall={400}/>
+                        </Col>
                     </Row>
                 </Container>
             </Row>
