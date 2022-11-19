@@ -39,7 +39,7 @@ function App() {
   return (
     <>
 
-      <div className='heading'>
+      <div className='heading' style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
 
         <img src={Foodie} id="logo"></img>  
 
@@ -91,24 +91,26 @@ function App() {
 
       </div>
 
+      <div style={{margin: "0 auto", position: "absolute"}}>
+        <button style={{backgroundColor: "lightgrey", margin: "0 auto"}} onClick={() => handleClick()} id="stepsButton"
+        >
+        {buttonText}
+        </button>
+
+        {expanded && 
+        
+          <div className='steps'>
+            
+            {recipeSteps.map(
+
+              (recipeStep) => { return <RecipeStep text={(recipeStep)}></RecipeStep>
+            })}
+
+
+          </div>
+        }
+      </div>
       
-      <button style={{backgroundColor: "lightgrey"}} onClick={() => handleClick()} id="stepsButton"
-      >
-      {buttonText}
-      </button>
-
-      {expanded && 
-      
-        <div className='steps'>
-          
-          {recipeSteps.map(
-
-            (recipeStep) => { return <RecipeStep text={(recipeStep)}></RecipeStep>
-          })}
-
-
-        </div>
-      }
 
 
       
