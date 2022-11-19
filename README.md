@@ -12,3 +12,5 @@ LOCATION: De Neve Plaza Rooms A & B
 
 # Submission
 Please fork this repository, and contribute to your forked version. We will not be accepting any changes to the main repository! When you're done, create a repository on GitHub, and push your changes there. Next just give us a working link, and you're done!
+
+It's time to rock!
