@@ -51,10 +51,61 @@ Explanation:
 # Dessert service starts in 30 minutes, so complete the function asap and don't disappoint Gordon!
 def get_ingredients(ingredients, budget):
     # Write your code here
-    return ingredients
+
+    ingredients.sort(key=lambda x: x[1])
+
+    #print(ingredients)
+
+    # prioritize one of each ingredient first
+
+    ans = [];
+
+    for oneD in ingredients:
+        if(budget >= oneD[1]):
+            ans.append([oneD[0], oneD[1], 1]);
+            budget -= oneD[1];
+        else:
+            return ans;
+    # now sort by price * ingredientsRemaining - 1;
+
+    reference = [];
+    count = 0;
+    for oneD in ingredients:
+
+        if(oneD[1] * (oneD[2] - 1) > 0):
+            reference.append([oneD[1] * (oneD[2] - 1), oneD[0], count]); # remanining amount left needed to reach minimum
+        count = count + 1;
+    
+    reference.sort(key=lambda x: x[0])
+
+    #print(ans);
+
+    #print(reference);
+
+    # now we go through and try to satisfy minimums:
+
+    mainlength = len(ingredients);
+
+    for e in range(mainlength):
+        if(budget >= reference[e][0]):
+            budget -= reference[e][0]; # budget set for next iteration
+
+            # fully add this ingredient to our list
+
+            for f in range(len(ans)):
+                if(ans[f][0] == reference[e][1]):
+                    ans[f][2] = ingredients[reference[e][2]][2];
+                    #print(ingredients[e][2]);
+                    break;
+
+    finalans = [];
+
+    for oneD in ans:
+        finalans.append([oneD[0], oneD[2]]);
+    return finalans;
 
 if __name__ == '__main__':
     # Edit ingredients and budget to test your program
-    ingredients = [["water", 2.99, 1]]
-    budget = 0
+    ingredients = [["water", 2.99, 3], ["fruit", 3.99, 2], ["veggies", 1, 5]]
+    budget = 12
     print(get_ingredients(ingredients, budget))

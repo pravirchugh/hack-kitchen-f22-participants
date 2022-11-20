@@ -10,4 +10,11 @@ int main() {
     } else {
         cout << "Failed test case :(" << endl;
     }
+
+    string ingredients2[] = {"egg", "cheE234234234 se", "cheese", "bread", "jam"};
+    if(getUniqueIngredients(ingredients2, 5) == 4){
+        cout << "Passed test case!" << endl;
+    } else {
+        cout << "Failed test case :(" << endl;
+    }
 }
